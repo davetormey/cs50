@@ -2,8 +2,10 @@
 
 #include <cs50.h>
 #include <stdio.h>
-
+#include <string.h>
 #include "helpers.h"
+#define UNUSED(x) (void)(x)
+
 
 // Converts a fraction formatted as X/Y to eighths
 int duration(string fraction)
@@ -17,7 +19,20 @@ int duration(string fraction)
 int frequency(string note)
 {
     // TODO
-    printf("%s\n",note );
+    printf("\nLength: %ld",strlen(note));
+    printf("\nFreqency: %s\n",note );
+
+    char octave;
+
+
+    // If we have an accent
+    if (strlen(note)== 3)
+    { char mynote = note[0];
+        char accent = note[1];
+        octave = atoi(&note[2]);
+        printf("\nmynote: %c, accent:%c, octave:%d\n",mynote,accent,octave);
+
+    }
     return 0;
 }
 
