@@ -1,0 +1,10 @@
+/tmp/ccDm6ZIl.o: In function `main':
+/home/dave/cs50/workspace/pset3/music/synthesize.c:21: undefined reference to `song_open'
+/home/dave/cs50/workspace/pset3/music/synthesize.c:27: undefined reference to `get_string'
+/home/dave/cs50/workspace/pset3/music/synthesize.c:36: undefined reference to `is_rest'
+/home/dave/cs50/workspace/pset3/music/synthesize.c:38: undefined reference to `rest_write'
+/home/dave/cs50/workspace/pset3/music/synthesize.c:47: undefined reference to `duration'
+/home/dave/cs50/workspace/pset3/music/synthesize.c:47: undefined reference to `frequency'
+/home/dave/cs50/workspace/pset3/music/synthesize.c:47: undefined reference to `note_write'
+/home/dave/cs50/workspace/pset3/music/synthesize.c:52: undefined reference to `song_close'
+collect2: error: ld returned 1 exit status
