@@ -14,8 +14,14 @@ int G4=-1;
 int duration(string fraction)
 {
     //TODO
-    printf("\nDuration: %s\n", fraction);
-    return 1;
+    printf("\nDuration: %c\n", fraction[0]);
+    int num = fraction[0]-'0';
+    int den = fraction[2]-'0';
+    printf("\nDuration: %d / %d\n", num,den);
+    float multiplier = 8 / den;
+    num = multiplier * num;
+
+    return num;
 }
 
 // Calculates frequency (in Hz) of a note
@@ -87,6 +93,8 @@ int frequency(string note)
 bool is_rest(string s)
 {
     // TODO
-    printf("%s\n",s );
+    printf("String: %s\n",s );
+    //if ( strcmp("\n",s) == 0 )  { return 1;};
+    if ( s[0] == '\0') { printf("Nada String"); return 1;}
     return 0;
 }
