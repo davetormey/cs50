@@ -23,15 +23,28 @@ int frequency(string note)
     printf("\nFreqency: %s\n",note );
 
     char octave;
-
+    char mynote;
+    char accent;
 
     // If we have an accent
     if (strlen(note)== 3)
-    { char mynote = note[0];
-        char accent = note[1];
+    {   mynote = note[0];
+        accent = note[1];
         octave = atoi(&note[2]);
         printf("\nmynote: %c, accent:%c, octave:%d\n",mynote,accent,octave);
 
+    }
+    else
+    {
+      mynote=note[0];
+      octave = atoi(&note[1]);
+      accent = 52;
+      printf("\nmynote: %c, accent:%c, octave:%d\n",mynote,accent,octave);
+
+    }
+    if (mynote == 'A')
+    {
+      printf ("\nI found letter:%c",mynote);
     }
     return 0;
 }
