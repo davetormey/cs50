@@ -4,8 +4,11 @@
 #include <stdio.h>
 #include <string.h>
 #include "helpers.h"
+#include <math.h>
 #define UNUSED(x) (void)(x)
 
+int a4=0;
+int G4=-1;
 
 // Converts a fraction formatted as X/Y to eighths
 int duration(string fraction)
@@ -22,16 +25,24 @@ int frequency(string note)
     printf("\nLength: %ld",strlen(note));
     printf("\nFreqency: %s\n",note );
 
+
+
+
     char octave;
     char mynote;
     char accent;
 
-    // If we have an accent
+    char note_accent[3];
+    /* If we have an accent
+    */
     if (strlen(note)== 3)
     {   mynote = note[0];
         accent = note[1];
         octave = atoi(&note[2]);
         printf("\nmynote: %c, accent:%c, octave:%d\n",mynote,accent,octave);
+        note_accent[0]=mynote;
+        note_accent[1]=accent;
+        note_accent[2]='\0';
 
     }
     else
@@ -40,12 +51,34 @@ int frequency(string note)
       octave = atoi(&note[1]);
       accent = 52;
       printf("\nmynote: %c, accent:%c, octave:%d\n",mynote,accent,octave);
+      //printf("G4: %d",G4);
+      note_accent[0]=mynote;
+      note_accent[1]='\0';
+    }
 
-    }
-    if (mynote == 'A')
-    {
-      printf ("\nI found letter:%c",mynote);
-    }
+    float  st=0;
+    if ( mynote == 'A')  { st = 0.0; }
+    if ( mynote == 'B')  { st = 2.0; };
+    if ( mynote == 'C')  { st = -9.0; }
+    if ( mynote == 'D')  { st = -7.0; };
+    if ( mynote == 'E')  { st = -5.0; }
+    if ( mynote == 'F')  { st = -4.0; };
+    if ( mynote == 'G')  { st = -2.0; };
+
+    //double frequency = pow(2.0,(st/12));
+    float myexp = st/12;
+    double frequency = pow(2.0,myexp)*440;
+
+    printf ("Debug: %lf",myexp);
+
+
+    // char note_accent = strcat(&mynote,&accent);
+    //Sstrcat(note_accent,&accent);
+    //if (mynote == 'A')
+    //{
+
+    printf ("\nfull_note:%c semitone:%f freq:%f\n",mynote,st,frequency);
+    //}
     return 0;
 }
 
