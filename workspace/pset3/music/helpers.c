@@ -14,10 +14,10 @@ int G4=-1;
 int duration(string fraction)
 {
     //TODO
-    printf("\nDuration: %c\n", fraction[0]);
+    //printf("\nDuration: %c\n", fraction[0]);
     int num = fraction[0]-'0';
     int den = fraction[2]-'0';
-    printf("\nDuration: %d / %d\n", num,den);
+    //printf("\nDuration: %d / %d\n", num,den);
     float multiplier = 8 / den;
     num = multiplier * num;
 
@@ -44,7 +44,7 @@ int frequency(string note)
     {   mynote = note[0];
         accent = note[1];
         octave = atoi(&note[2]);
-        printf("\nmynote: %c, accent:%c, octave:%d\n",mynote,accent,octave);
+        //printf("\nmynote: %c, accent:%c, octave:%d\n",mynote,accent,octave);
         note_accent[0]=mynote;
         note_accent[1]=accent;
         note_accent[2]='\0';
@@ -55,7 +55,7 @@ int frequency(string note)
       mynote=note[0];
       octave = atoi(&note[1]);
       accent = 52;
-      printf("\nmynote: %c, accent:%c, octave:%d\n",mynote,accent,octave);
+      //printf("\nmynote: %c, accent:%c, octave:%d\n",mynote,accent,octave);
       //printf("G4: %d",G4);
       note_accent[0]=mynote;
       note_accent[1]='\0';
@@ -83,8 +83,10 @@ int frequency(string note)
     //Sstrcat(note_accent,&accent);
     //if (mynote == 'A')
     //{
-
-    printf ("\nfull_note:%c semitone:%f freq:%f\n",mynote,st,frequency);
+    int scale = octave-4;
+    //for (int x=0; x<scale;x++)
+    int intf = round(frequency * pow(2,scale));
+    printf ("\nfull_note:%c semitone:%f freq:%f octave:%d\n",mynote,st,intf,octave);
     //}
     return frequency;
 }
