@@ -13,9 +13,9 @@ int G4=-1;
 // Converts a fraction formatted as X/Y to eighths
 int duration(string fraction)
 {
-    // TODO
-    printf("%s\n", fraction);
-    return 0;
+    //TODO
+    printf("\nDuration: %s\n", fraction);
+    return 1;
 }
 
 // Calculates frequency (in Hz) of a note
@@ -31,7 +31,6 @@ int frequency(string note)
     char octave;
     char mynote;
     char accent;
-
     char note_accent[3];
     /* If we have an accent
     */
@@ -65,6 +64,8 @@ int frequency(string note)
     if ( mynote == 'F')  { st = -4.0; };
     if ( mynote == 'G')  { st = -2.0; };
 
+    if ( accent == '#')  { st = st + 1.0; };
+    if ( accent == 'b')  { st = st - 1 ;};
     //double frequency = pow(2.0,(st/12));
     float myexp = st/12;
     double frequency = pow(2.0,myexp)*440;
@@ -79,7 +80,7 @@ int frequency(string note)
 
     printf ("\nfull_note:%c semitone:%f freq:%f\n",mynote,st,frequency);
     //}
-    return 0;
+    return frequency;
 }
 
 // Determines whether a string represents a rest

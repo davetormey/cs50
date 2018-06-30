@@ -29,8 +29,11 @@ int main(int argc, string argv[])
         // Check for EOF
         if (line == NULL)
         {
+            printf ("Debug: NULL entered");
             break;
+            //return(0);
         }
+        printf("\nLine: %s\n",line);
 
         // Check if line is rest
         if (is_rest(line))
@@ -44,6 +47,7 @@ int main(int argc, string argv[])
             string fraction = strtok(NULL, "@");
 
             // Write note to song
+            printf ("\nnote_write: %d %d\n", frequency(mynote), duration(fraction));
             note_write(s, frequency(mynote), duration(fraction));
         }
     }
