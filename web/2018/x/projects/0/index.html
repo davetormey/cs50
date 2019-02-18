@@ -1,81 +1,74 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>My Webpage</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
-    </head>
-    <body>
-        <div class="jumbotron text-center" style="margin-bottom: 0">
-            <h1> Daves Project 0 </h1>
 
+<head>
+    <title>My Webpage</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $('.header').load('banner.html');
+        });
+    </script>
+
+    <div class="header"></div>
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-sm-6">
+            <img src="images/speedmaster.png" height=200>
+            <p> Omega Speeedmaster </p>
+        </div>
+        <div class="col-sm-6" class="bord1">
+            <img src="images/omega-seamaster-diver-300m.png" height=200>
+            <p> Omega Seamaster</p>
         </div>
 
-        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-                <a class="navbar-brand" href="#">Navbar</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    </div>
 
-                <ul class="navbar-nav">
-                        <li class="nav-item">
-                                <a class="nav-link" href="#">Link</a>
-                              </li>
-                    <li class="nav-item">
-                        About
-                    </li>
-                    <li>
-                        Legal
-                    </li>
-    
-                </ul>
-                </div>
-        </nav>
 
-        <br>
+    <br>
 
-        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-                <a class="navbar-brand" href="#">Navbar</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                  <ul class="navbar-nav">
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Link</a>
-                    </li>    
-                  </ul>
-                </div>  
-              </nav>
-        <br>
+    <p>
+        Hello again
+    </p>
 
-        <nav class="navbar bg-dark navbar-dark">
-                <a class="navbar-brand" href="#">Navbar</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <div>
+        <ul {columns: 3;}>
+            <li><img class="centered-and-cropped" src="images/omega-seamaster-diver-300m.png" height=200 width=200>
+                <p> Omega Seamaster</p>
+            </li>
+            <li><img class="centered-and-cropped" src="images/dj1.jpg" height=200 width=200>
+                <p> Rolex Datejust</p>
+            </li>
+            <li>
+                <img class="centered-and-cropped" src="images/gshock1.jpg" height=200 width=200>
+                <p> Casio Gshock</p>
+            </li>
+            <li><img class="centered-and-cropped" src="images/seiko1.jpg" height=200 width=200>
+                <p> Seiko Watch</p>
+            </li>
+            <li><img class="centered-and-cropped" src="images/dj3.jpg" height=200 width=200>
+                <p> Rolex Datejust 3</p>
+            </li>
+            <li><img class="centered-and-cropped" src="images/dj2.jpg" height=200 width=200>
+                <p> Rolex Vintage</p>
+            </li>
+            <li><img class="centered-and-cropped" src="images/omega-seamaster-diver-300m.png" height=200 width=200>
+                <p> Omega Seamaster</p>
+            </li>
+            <li><img class="centered-and-cropped" src="images/omega-seamaster-diver-300m.png" height=200 width=200>
+                <p> Omega Seamaster</p>
+            </li>
 
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
-                        </li>
-                    <li class="nav-item">
-                        About
-                    </li>
-                    <li>
-                        Legal
-                    </li>
-    
-                </ul>
-                </div>
-        </nav>
-        Hello, world!
-    </body>
+
+
+        </ul>
+    </div>
+
+
+</body>
+
 </html>
